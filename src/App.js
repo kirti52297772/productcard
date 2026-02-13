@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ProductCard from "./ProductCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
+      <ProductCard
+        name="Wireless Headphones"
+        price={2499}
+        image="https://via.placeholder.com/200"
+        inStock={true}
+      />
+
+      <ProductCard
+        name="Smart Watch"
+        price={3999}
+        image="https://via.placeholder.com/200"
+        inStock={false}
+      />
     </div>
   );
 }
